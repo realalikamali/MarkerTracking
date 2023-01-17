@@ -241,7 +241,7 @@ classdef MarkerTracking < handle
                 videoPlayer(out);
                 writeVideo(video_object, out);
                 [A,map] = rgb2ind(out,256);
-                if i == 2
+                if i == 1
                     imwrite(A,map,append(vidname,'.gif'),'gif','LoopCount',Inf,'DelayTime',1/obj.original_frame_rate);
                 else
                     imwrite(A,map,append(vidname,'.gif'),'gif','WriteMode','append','DelayTime',1/obj.original_frame_rate);
